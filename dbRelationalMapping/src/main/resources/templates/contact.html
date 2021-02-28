@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact</title>
+
+        <style>
+            .con {
+                text-align: center;
+                margin: 3em;
+            }
+
+            .con input[type=submit] {
+                margin-top: 1em;
+            }
+
+            label {
+                text-align: left;
+                margin-top: 1em;
+            }​
+
+            h1 {
+                text-align: center;
+            }
+
+            input[name=msgtext] {
+                width: 300px;
+                height: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form class="con" th:action="" th:object="" method="POST">
+            <h1>Please fill the Form</h1>
+            <label>Firstname:</label>
+            <br>
+            <input type="text" placeholder="Enter Firstname" name="firstname">
+            <br><br>
+            <label>Lastname:</label>
+            <br>
+            <input type="text" placeholder="Enter Lastname" name="lastname">
+            <br><br>
+            <label>E-Mail:</label>
+            <br>
+            <input type="text" placeholder="Enter E-Mail" name="email">
+            <br><br>
+            <label>Message Text:</label>
+            <br>
+            <input type="text" placeholder="Enter Message Text" name="msgtext">
+            <br><br>
+
+            <input type="submit" value="Send Contactorder">
+        </form>
+    </body>
+</html>
