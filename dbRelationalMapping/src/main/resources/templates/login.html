@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+
+        <style>
+            .log {
+                text-align: center;
+                margin: 3em;
+            }
+
+            .log input[type=submit] {
+                margin-top: 1em;
+            }
+
+            label {
+                display: inline-block;
+                width: 140px;
+                text-align: left;
+                margin-top: 1em;
+            }​
+
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form class="log" th:action="@{/loggedin}" th:object="${shopaccount}" method="POST">
+            <h1>Please Login</h1>
+            <label>Username:</label>
+            <br>
+            <input type="text" placeholder="Enter Username" th:field="*{susername}">
+            <br>
+            <label>Password:</label>
+            <br>
+            <input type="password" placeholder="Enter Password" th:field="*{spassword}">
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </body>
+</html>

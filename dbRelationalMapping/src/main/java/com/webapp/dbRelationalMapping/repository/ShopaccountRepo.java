@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ShopaccountRepo extends JpaRepository<Shopaccount, Long> {
-
+    Shopaccount findBysusername(String susername);
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homepage</title>
+        <style>
+            .nav-control {
+                 text-align: center;
+            }
+
+            th, td {
+                 border: 1px solid black;
+                 border-collapse: collapse;
+            }
+
+            table {
+                 margin-left: auto;
+                 margin-right: auto;
+                 font-size: 25px;
+            }
+
+            h1 {
+                 text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Hello Shop</h1>
+        <div class="nav-control">
+            <a th:href="@{/homepage}">Home</a>
+            <a th:href="@{/about}">About</a>
+            <a th:href="@{/contact}">Contact</a>
+            <a th:href="@{/login}">Login</a>
+            <a th:href="@{/register}">Register</a>
+        </div>
+
+        <br>
+
+        <div class="product-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Item Number</th>
+                        <th>Available</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="item : ${Items}">
+                        <td th:text="${item.iname}">Item Name</td>
+                        <td th:text="${item.iitemnumber}">Item Number</td>
+                        <td th:text="${item.iavailable}">Available</td>
+                        <td th:text="${item.iamount}">Amount</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
